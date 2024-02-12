@@ -241,7 +241,7 @@ function translateErr(err: number | string | Error | unknown) {
     : err === ERR_HASS_HOST_REQUIRED
     ? "Please enter a Home Assistant URL."
     : err === ERR_INVALID_HTTPS_TO_HTTP
-    ? `Cannot connect to Home Assistant instances over "http://".`
+    ? `Cannot connect to Home Assistant instances over "http://". Hint: this is governed by allowNonSecure option.`
     : `Unknown error (${err}).`;
 }
 type ConnectionResponse =
